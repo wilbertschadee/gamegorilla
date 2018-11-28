@@ -8,14 +8,15 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" href="css/nav.css">
 
 </head>
 <body>
   
     <div class="navWrapper">    
-        <!-- <a href="index.php" class="navLogo">
-            <img src="img/gorillaBayLogo.png" alt="gorillaBayLogo">
-        </a> -->
+        <div class="navLogo">
+            <a href="index.php"><img src="img/gameGorilla.png" alt=""></a>
+        </div>
         <div class="navLink">
             <!-- <a href="games.php">GAMES</a>
             <a href="#">CONSOLES</a>
