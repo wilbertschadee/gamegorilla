@@ -21,7 +21,7 @@
 
 $conn = null;
 
-header("Location: ../singUp.php");
+header("Location: ../signUp.php");
         
         
 ?>
