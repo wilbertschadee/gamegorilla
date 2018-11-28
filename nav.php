@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/login.css" />
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/display.css">
 
 </head>
 <body>
@@ -18,8 +19,8 @@
             <a href="index.php"><img src="img/gameGorilla.png" alt=""></a>
         </div>
         <div class="navLink">
-            <!-- <a href="games.php">GAMES</a>
-            <a href="#">CONSOLES</a>
+            <a href="games.php">GAMES</a>
+            <!-- <a href="#">CONSOLES</a>
             <a href="#">ACCESSOIRES</a> -->
         </div >
 
