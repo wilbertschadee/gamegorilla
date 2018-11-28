@@ -2,7 +2,7 @@
     
     include "dbConnection.php";
     
-    $sql = "SELECT * FROM games ";
+    $sql = "SELECT * FROM console ";
     
     $data = $conn->query($sql);
 
@@ -13,8 +13,8 @@
         
             $htmlOutput  = "";         
             $htmlOutput  = '<div class="product">';
-            $htmlOutput .= '<img src="' . $row['img_path'] . '" alt="' . $row['game_name'] . '" style="max-width:100%">';
-            $htmlOutput .= '<h1 class=name>'. $row['game_name'] . ' - ' . $row['platform'] . '</h1>';
+            $htmlOutput .= '<img class="img" src="' . $row['img_path'] . '" alt="' . $row['console_name'] . '" style="max-width:100%">';
+            $htmlOutput .= '<h1 class=name>'. $row['console_name'] . '</h1>';
             $htmlOutput .= '<p class="price"><span class="oldPrice"> € ' . $row['price'] . '</span> - €' . $row['sale_price'] . '</p>';
             $htmlOutput .= '</div>';   
 
@@ -24,9 +24,9 @@
 
             $htmlOutput  = "";         
             $htmlOutput  = '<div class="product">';
-            $htmlOutput .= '<img src="' . $row['img_path'] . '" alt="' . $row['game_name'] . '" style="max-width:100%">';
+            $htmlOutput .= '<img class="img" src="' . $row['img_path'] . '" alt="' . $row['console_name'] . '" style="max-width:100%">';
             $htmlOutput .= '<p class=release>' . $row['releases'] . ' beschikbaar</p>';
-            $htmlOutput .= '<h1 class=name>'. $row['game_name']  . ' - ' . $row['platform'] . '</h1>';
+            $htmlOutput .= '<h1 class=name>'. $row['console_name']  . '</h1>';
             $htmlOutput .= '<p class="price"> € ' . $row['price'] . '</p>';
             $htmlOutput .= '</div>';   
 
@@ -36,8 +36,8 @@
 
             $htmlOutput  = "";         
             $htmlOutput  = '<div class="product">';
-            $htmlOutput .= '<img src="' . $row['img_path'] . '" alt="' . $row['game_name'] . '" style="max-width:100%">';   
-            $htmlOutput .= '<h1 class=name>'. $row['game_name'] . ' - ' . $row['platform'] . '</h1>';
+            $htmlOutput .= '<img class="img" src="' . $row['img_path'] . '" alt="' . $row['console_name'] . '" style="max-width:100%">';   
+            $htmlOutput .= '<h1 class=name>'. $row['console_name'] . '</h1>';
             $htmlOutput .= '<p class="price"> € ' . $row['price'] . '</p>';
             $htmlOutput .= '</div>'; 
 

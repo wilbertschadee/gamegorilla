@@ -20,8 +20,8 @@
         </div>
         <div class="navLink">
             <a href="games.php">GAMES</a>
-            <!-- <a href="#">CONSOLES</a>
-            <a href="#">ACCESSOIRES</a> -->
+            <a href="console.php">CONSOLES</a>
+            <!-- <a href="#">ACCESSOIRES</a> -->
         </div >
 
         <div class="navLogin">
