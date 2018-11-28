@@ -6,7 +6,7 @@
             <div class="productWrapper">
                 <div class="cat">GAMES</div>
                 <div class="products">
-                    <?php include "php/test.php"; ?>
+                    <?php include "php/games.php"; ?>
                 </div>
             </div>
         </div>
