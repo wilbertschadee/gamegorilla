@@ -2,7 +2,7 @@
     
     include "dbConnection.php";
     
-    $sql = "SELECT * FROM games WHERE releases >= DATE_ADD(CURDATE(), INTERVAL -1 month);";
+    $sql = "SELECT * FROM games WHERE sale='1'";
     
     $data = $conn->query($sql); 
 
@@ -12,9 +12,8 @@
         $htmlOutput  = "";         
         $htmlOutput  = '<div class="product">';
         $htmlOutput .= '<img src="' . $row['img_path'] . '" alt="' . $row['game_name'] . '" style="max-width:100%">';
-        $htmlOutput .= '<p class=release>' . $row['releases'] . ' beschikbaar</p>';
         $htmlOutput .= '<h1 class=name>'. $row['game_name']  . '</h1>';
-        $htmlOutput .= '<p class="price"> € ' . $row['price'] . '</p>';
+        $htmlOutput .= '<p class="price"><span class="oldPrice"> € ' . $row['price'] . '</span> - €' . $row['sale_price'] . '</p>';
         $htmlOutput .= '</div>';   
 
         echo $htmlOutput;
