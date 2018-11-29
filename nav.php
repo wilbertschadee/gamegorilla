@@ -21,7 +21,7 @@
         <div class="navLink">
             <a href="games.php">GAMES</a>
             <a href="console.php">CONSOLES</a>
-            <!-- <a href="#">ACCESSOIRES</a> -->
+            <a href="accessoires.php">ACCESSOIRES</a>
         </div >
 
         <div class="navLogin">
