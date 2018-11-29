@@ -13,9 +13,11 @@
         
             $htmlOutput  = "";         
             $htmlOutput  = '<div class="product">';
+            $htmlOutput .= '<a href="' . 'products.php?acc_id=' . $row['acc_id'] . '">';
             $htmlOutput .= '<img class="img" src="' . $row['img_path'] . '" alt="' . $row['acc_name'] . '" style="max-width:100%">';
             $htmlOutput .= '<h1 class=name>'. $row['acc_name'] . " - " . $row['platform'] . '</h1>';
             $htmlOutput .= '<p class="price"><span class="oldPrice"> € ' . $row['price'] . '</span> - €' . $row['sale_price'] . '</p>';
+            $htmlOutput .= '</a>';
             $htmlOutput .= '</div>';   
 
             echo $htmlOutput;
@@ -24,10 +26,12 @@
 
             $htmlOutput  = "";         
             $htmlOutput  = '<div class="product">';
+            $htmlOutput .= '<a href="' . 'products.php?acc_id=' . $row['acc_id'] . '">';
             $htmlOutput .= '<img class="img" src="' . $row['img_path'] . '" alt="' . $row['acc_name'] . '" style="max-width:100%">';
             $htmlOutput .= '<p class=release>' . $row['releases'] . ' beschikbaar</p>';
             $htmlOutput .= '<h1 class=name>'. $row['acc_name'] . " - " . $row['platform'] . '</h1>';
             $htmlOutput .= '<p class="price"> € ' . $row['price'] . '</p>';
+            $htmlOutput .= '</a>';
             $htmlOutput .= '</div>';   
 
             echo $htmlOutput;
@@ -36,9 +40,11 @@
 
             $htmlOutput  = "";         
             $htmlOutput  = '<div class="product">';
+            $htmlOutput .= '<a href="'. 'products.php?acc_id=' . $row['acc_id'] . '">';
             $htmlOutput .= '<img class="img" src="' . $row['img_path'] . '" alt="' . $row['acc_name'] . '" style="max-width:100%">';   
             $htmlOutput .= '<h1 class=name>'. $row['acc_name'] . " - " . $row['platform'] . '</h1>';
             $htmlOutput .= '<p class="price"> € ' . $row['price'] . '</p>';
+            $htmlOutput .= '</a>';
             $htmlOutput .= '</div>'; 
 
             echo $htmlOutput;

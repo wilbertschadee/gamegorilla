@@ -4,9 +4,9 @@
 
     include "php/dbConnection.php";
 
-    $products = $_GET['acc_id'];
+    $products = $_GET['console_id'];
 
-    $sql = "SELECT * FROM accessoires WHERE acc_id = '$products'";
+    $sql = "SELECT * FROM console WHERE console_id = '$products'";
     
     $data = $conn->query($sql); 
 
@@ -20,8 +20,8 @@
             $htmlOutput .= '<div class="productRow">';
             $htmlOutput .= '<img src="' . $row['img_path'] . '" alt="">';
             $htmlOutput .= '<div class="productInfo">';
-            $htmlOutput .= '<h1 class="productName">' . $row['acc_name'] . ' - ' . $row['platform'] . '</h1>';
-            $htmlOutput .= '<p class="productPrice"><span class="oldPrice"> € ' . $row['price'] . '</span> - €' . $row['sale_price'] . '</p>';
+            $htmlOutput .= '<h1 class="productName">' . $row['console_name'] . ' - ' . $row['platform'] . '</h1>';
+            $htmlOutput .= '<p class="productPrice"><span class="oldPrice">&euro; ' . $row['price'] . '</span> - &euro;' . $row['sale_price'] . '</p>';
             $htmlOutput .= '</div>';
             $htmlOutput .= '</div>';
             $htmlOutput .= '<div class="description">Beschrijving</div>';
@@ -38,8 +38,8 @@
             $htmlOutput .= '<div class="productRow">';
             $htmlOutput .= '<img src="' . $row['img_path'] . '" alt="">';
             $htmlOutput .= '<div class="productInfo">';
-            $htmlOutput .= '<h1 class="productName">' . $row['acc_name'] . ' - ' . $row['platform'] . '</h1>';
-            $htmlOutput .= 'div class="release"> Beschikbaar vanaf' . $row['releases'] . '</div>';
+            $htmlOutput .= '<h1 class="productName">' . $row['console_name'] . ' - ' . $row['platform'] . '</h1>';
+            $htmlOutput .= '<div class="release"> Beschikbaar vanaf ' . $row['releases'] . '</div>';
             $htmlOutput .= '<div class="productPrice">&euro;'. $row['price'] . '</div>';
             $htmlOutput .= '</div>';
             $htmlOutput .= '</div>';
@@ -57,7 +57,7 @@
             $htmlOutput .= '<div class="productRow">';
             $htmlOutput .= '<img src="' . $row['img_path'] . '" alt="">';
             $htmlOutput .= '<div class="productInfo">';
-            $htmlOutput .= '<h1 class="productName">' . $row['acc_name'] . ' - ' . $row['platform'] . '</h1>';
+            $htmlOutput .= '<h1 class="productName">' . $row['console_name'] . ' - ' . $row['platform'] . '</h1>';
             $htmlOutput .= '<div class="productPrice">&euro;'. $row['price'] . '</div>';
             $htmlOutput .= '</div>';
             $htmlOutput .= '</div>';

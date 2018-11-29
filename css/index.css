@@ -70,3 +70,8 @@ body{
     max-height: 220px;
     min-height: 220px;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}

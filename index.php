@@ -1,4 +1,4 @@
-<?php require"nav.php"?>
+<?php require "nav.php"?>
 
     <div class="content">
 

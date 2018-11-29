@@ -5,13 +5,10 @@
     $user_email = $_POST["Email"];
     $user_password = $_POST["Password"];
 
-    // echo $user_email;
 
     $sql = "SELECT * FROM users WHERE email='$user_email' AND upassword='$user_password'" ;
     
     $data = $conn->query($sql);
-
-
 
     // $data->execute(array($user_email,$user_password));
     // $row = $data->fetch(PDO::FETCH_BOTH);
