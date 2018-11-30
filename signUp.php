@@ -17,8 +17,8 @@
             <input type="text" placeholder="Achternaam" name="Lname" required>
 
            
-            <button type="submit" class="signupbtn">Sign Up </button>
-            <button type="button" class="cancelbtn" onclick="window.location.href='logIn.php'">Cancel</button>
+            <button type="submit" class="signupBtn">Sign Up </button>
+            <button type="button" class="cancelBtn" onclick="window.location.href='logIn.php'">Cancel</button>
         </div>
     </form>
 

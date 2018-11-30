@@ -36,12 +36,12 @@ button:hover {
     opacity:1;
 }
 
-.cancelbtn {
+.cancelBtn {
     padding: 14px 20px;
     background-color: #f44336;
 }
 
-/* .cancelbtn, .signupbtn {
+/* .cancelBtn, .signupBtn {
     float: right; 
     width: 50%;
 } */
@@ -54,7 +54,7 @@ button:hover {
     box-shadow: 0px 10px 27px 4px rgba(0,0,0,0.75);
 }
   
-h2 {
+.line {
     width: 100%; 
     text-align: center; 
     border-bottom: 1px solid #000; 
@@ -62,7 +62,7 @@ h2 {
     margin: 10px 0 20px; 
 } 
  
-h2 span { 
+.line span { 
     background:#fff; 
     padding:0 10px; 
 }

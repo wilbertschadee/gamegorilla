@@ -11,7 +11,7 @@
             <input type="password" placeholder="Wachtwoord" name="Password" required>
           
             <button type="submit" class="signupbtn">Login</button>
-            <h2><span>of</span></h2>
+            <h2 class="line"><span>of</span></h2>
             <button type="button" onclick="window.location.href='signUp.php'">Sign up</button>
         </div>
     </form>
