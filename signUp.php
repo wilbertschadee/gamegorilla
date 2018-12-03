@@ -5,16 +5,16 @@
             <h1>Sign Up</h1>
 
             <label for="Email">Email</label>
-            <input type="text" placeholder="Email" name="Email" required autofocus>
+            <input class="inlog" type="text" placeholder="Email" name="Email" required autofocus>
 
             <label for="Password">Wachtwoord</label>
-            <input type="password" placeholder="Wachtwoord" name="Password" required>
+            <input class="inlog" type="password" placeholder="Wachtwoord" name="Password" required>
 
             <label for="Fname">Voornaam</label>
-            <input type="text" placeholder="Voornaam" name="Fname" required>
+            <input class="login" type="text" placeholder="Voornaam" name="Fname" required>
         
             <label for="Lname">Achternaam</label>
-            <input type="text" placeholder="Achternaam" name="Lname" required>
+            <input class="inlog" type="text" placeholder="Achternaam" name="Lname" required>
 
            
             <button type="submit" class="signupBtn">Sign Up </button>

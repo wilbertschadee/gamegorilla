@@ -1,3 +1,6 @@
+<?php  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,8 +30,16 @@
         </div >
 
         <div class="navLogin">
-            <a href="login.php">LOGIN</a>
-            <!-- <a href="#">WINKELWAGEN</a> -->
+            <?php 
+            if(isset($_SESSION["loggedin"])){
+                echo'<!--<a href="">MANDJE</a>-->
+                    <a href="profile.php?user_id=' . $_SESSION['userid'] . '">MIJN ACCOUNT</a>
+                    <a href="php/logout.php">LOG OUT</a>';
+            } else {
+                echo'<a href="login.php">LOGIN</a>';
+            }
+            ?>
+
         </div>
     </div>
 

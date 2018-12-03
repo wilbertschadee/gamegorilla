@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     include "php/dbConnection.php";
 
     $profile = $_GET['user_id'];
@@ -15,24 +17,27 @@
         $htmlOutput  ="";
         $htmlOutput  ='<div class="wrapper">';
         $htmlOutput .='<div class="cat">MIJN ACCOUNT</div>';
-        $htmlOutput .='<div class="welcome">Welkom <span>' . $row['fname'] . '</span></div>';
+        $htmlOutput .='<div class="welcome">Welkom <span>' . $_SESSION['firstname'] . '</span></div>';
         $htmlOutput .='<div class="info">';
-        $htmlOutput .='<h1>' . $row['fname'] . ' ' . $row['lname'] . '</h1>';
+        $htmlOutput .='<h1>' . $_SESSION['firstname'] . ' ' . $_SESSION['lastname'] . '</h1>';
         $htmlOutput .='<h2>Persoonlijke gegevens:</h2>';
-        $htmlOutput .='&nbsp;&nbsp;' . $row['birthdate'] . '<br>';
-        $htmlOutput .='&nbsp;&nbsp;' . $row['email'] . '<br>';
-        $htmlOutput .='&nbsp;&nbsp; <a href="">Wijzig persoonlijke gegevens</a>';
-        $htmlOutput .='</div>';
-        $htmlOutput .='<div class="orders">';
-        $htmlOutput .='<h1><span>Mijn bestellingen:</span></h1>';
-        $htmlOutput .='Geen online bestellingen gevonden';
-        $htmlOutput .='</div>';
-        $htmlOutput .='<div class="wishList">';
-        $htmlOutput .='<h1><span>Mijn wishlist:</span></h1>';
-        $htmlOutput .='Geen items in je wishlist.';
-        $htmlOutput .='</div>';
+        $htmlOutput .='&nbsp;&nbsp;' . $_SESSION['birthday'] . '<br>';
+        $htmlOutput .='&nbsp;&nbsp;' . $_SESSION['username'] . '<br>';
+        $htmlOutput .='&nbsp;&nbsp;<a href="changeForm.php">Wijzig persoonlijke gegevens</a>';
         $htmlOutput .='</div>';
 
         echo $htmlOutput;
     }
 ?>
+
+            <div class="orders">
+                <h1><span>Mijn bestellingen:</span></h1>
+                Geen online bestellingen gevonden
+            </div>
+            <div class="wishList">
+                <h1><span>Mijn wishlist:</span></h1>
+                Geen items in je wishlist.
+            </div>
+        </div>
+    </body>
+</html>
