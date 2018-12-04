@@ -2,7 +2,7 @@
     
     include "dbConnection.php";
     
-    $sql = "SELECT * FROM console ";
+    $sql = "SELECT * FROM products WHERE category = 'consoles' ";
     
     $data = $conn->query($sql);
 
@@ -13,9 +13,9 @@
         
             $htmlOutput  = "";  
             $htmlOutput  = '<div class="product">';
-            $htmlOutput .= '<a href="' . 'productsconsole.php?console_id=' . $row['console_id'] . '">';  
-            $htmlOutput .= '<img class="img" src="' . $row['img_path'] . '" alt="' . $row['console_name'] . '" style="max-width:100%">';
-            $htmlOutput .= '<h1 class=name>'. $row['console_name'] . '</h1>';
+            $htmlOutput .= '<a href="' . 'products.php?id=' . $row['id'] . '">';  
+            $htmlOutput .= '<img class="img" src="' . $row['img_path'] . '" alt="' . $row['name'] . '" style="max-width:100%">';
+            $htmlOutput .= '<h1 class=name>'. $row['name'] . '</h1>';
             $htmlOutput .= '<p class="price"><span class="oldPrice"> € ' . $row['price'] . '</span> - €' . $row['sale_price'] . '</p>';
             $htmlOutput .= '</a>';
             $htmlOutput .= '</div>';   
@@ -26,10 +26,10 @@
 
             $htmlOutput  = "";         
             $htmlOutput  = '<div class="product">';
-            $htmlOutput .= '<a href="' . 'productsconsole.php?console_id=' . $row['console_id'] . '">';  
-            $htmlOutput .= '<img class="img" src="' . $row['img_path'] . '" alt="' . $row['console_name'] . '" style="max-width:100%">';
+            $htmlOutput .= '<a href="' . 'products.php?id=' . $row['id'] . '">';  
+            $htmlOutput .= '<img class="img" src="' . $row['img_path'] . '" alt="' . $row['name'] . '" style="max-width:100%">';
             $htmlOutput .= '<p class=release>' . $row['releases'] . ' beschikbaar</p>';
-            $htmlOutput .= '<h1 class=name>'. $row['console_name']  . '</h1>';
+            $htmlOutput .= '<h1 class=name>'. $row['name']  . '</h1>';
             $htmlOutput .= '<p class="price"> € ' . $row['price'] . '</p>';
             $htmlOutput .= '</a>';
             $htmlOutput .= '</div>';   
@@ -40,9 +40,9 @@
 
             $htmlOutput  = "";         
             $htmlOutput  = '<div class="product">';
-            $htmlOutput .= '<a href="' . 'productsconsole.php?console_id=' . $row['console_id'] . '">';  
-            $htmlOutput .= '<img class="img" src="' . $row['img_path'] . '" alt="' . $row['console_name'] . '" style="max-width:100%">';   
-            $htmlOutput .= '<h1 class=name>'. $row['console_name'] . '</h1>';
+            $htmlOutput .= '<a href="' . 'products.php?id=' . $row['id'] . '">';  
+            $htmlOutput .= '<img class="img" src="' . $row['img_path'] . '" alt="' . $row['name'] . '" style="max-width:100%">';   
+            $htmlOutput .= '<h1 class=name>'. $row['name'] . '</h1>';
             $htmlOutput .= '<p class="price"> € ' . $row['price'] . '</p>';
             $htmlOutput .= '</a>';
             $htmlOutput .= '</div>'; 

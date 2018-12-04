@@ -48,3 +48,8 @@ html{
     width: 600px;
     margin: 0 auto;
 }
+
+.cartBtn{
+    width: 50%;
+    float: left;
+}

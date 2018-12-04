@@ -2,7 +2,7 @@
     
     include "dbConnection.php";
     
-    $sql = "SELECT * FROM games ";
+    $sql = "SELECT * FROM products WHERE category = 'games' ";
     
     $data = $conn->query($sql);
 
@@ -10,10 +10,10 @@
 
     foreach ($data as $row){
             echo '<div class="product"> 
-            <a href="' . 'productsgames.php?game_id=' . $row['game_id'] . '">
-            <img src="' . $row['img_path'] . '" alt="' . $row['game_name'] . '" style="max-width:100%">
+            <a href="' . 'products.php?id=' . $row['id'] . '">
+            <img src="' . $row['img_path'] . '" alt="' . $row['name'] . '" style="max-width:100%">
             '.($row["releases"] >= $date?'<p class=release>' . $row['releases'] . ' beschikbaar</p>':"").
-            '<h1 class=name>'. $row['game_name'] . ' - ' . $row['platform'] . '</h1>
+            '<h1 class=name>'. $row['name'] . ' - ' . $row['platform'] . '</h1>
             '.($row["sale"] == 1?'<p class="price"><span class="oldPrice"> € ' . $row['price'] . '</span> - €' . $row['sale_price'] . '</p>':'<p class="price"> € ' . $row['price'] . '</p>').
             '</a>
             </div>';   
