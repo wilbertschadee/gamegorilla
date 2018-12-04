@@ -23,6 +23,13 @@
     <div class="navWrapper">    
         <div class="navLogo">
             <a href="index.php"><img src="img/gameGorilla.png" alt=""></a>
+            <?php 
+            if(isset($_SESSION["loggedin"])){
+                if($_SESSION['role'] == 1){
+                    echo '<a href = "addProduct.php">PRODUCT TOEVOEGEN<a>';
+                }
+            }
+            ?>
         </div>
         <div class="navLink">
             <a href="games.php">GAMES</a>
