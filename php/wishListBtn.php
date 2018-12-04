@@ -5,7 +5,9 @@
     session_start();
 
     $productId = $_GET['id'];
-    $userId = $_SESSION['user_id'];
+    $userId = $_SESSION['userid'];
+
+    echo $productId;
 
     try {
         $sql = "INSERT INTO wishlist (user_id, product_id)

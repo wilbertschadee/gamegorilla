@@ -32,7 +32,7 @@
 
             <div class="orders">
                 <h1 class="lines"><span>Mijn bestellingen:</span></h1>
-                Geen online bestellingen gevonden
+                <?php include "php/orders.php" ?>
             </div>
             <div class="wishList">
                 <h1 class="lines"><span>Mijn wishlist:</span></h1>

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/display.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/profile.css">
+    <script src="js/wishlist.js"></script>
 
 </head>
 <body>

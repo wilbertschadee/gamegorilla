@@ -4,7 +4,7 @@
     
     $profile = $_GET['user_id'];
 
-    $sql = "SELECT * FROM wishlist WHERE user_id = '$profile'";
+    $sql = "SELECT * FROM orders WHERE user_id = '$profile'";
 
     $data = $conn->query($sql);
 
@@ -12,9 +12,9 @@
 
         if($data->rowCount() > 0) {
 
-            $wishList = $row['product_id'];
+            $orders = $row['product_id'];
 
-            $sql = "SELECT * FROM products WHERE id = '$wishList'";
+            $sql = "SELECT * FROM products WHERE id = '$orders'";
         
             $data = $conn->query($sql);
         
@@ -31,7 +31,7 @@
                     </div>';   
             }
         }else if($data->rowCount() == 0){
-            echo 'geen items in wishlist.';
+            echo 'Geen online bestellingen gevonden ';
         }
     }
 ?>

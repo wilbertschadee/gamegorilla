@@ -14,63 +14,24 @@
     $date = date('Y-m-d');
 
     foreach ($data as $row){
-        if($row["sale"] == 1){   
-            $htmlOutput  = "";   
-            $htmlOutput  = '<div class="productContent">';
-            $htmlOutput .= '<div class="productRow">';
-            $htmlOutput .= '<img src="' . $row['img_path'] . '" alt="">';
-            $htmlOutput .= '<div class="productInfo">';
-            $htmlOutput .= '<h1 class="productName">' . $row['name'] . ' - ' . $row['platform'] . '</h1>';
-            $htmlOutput .= '<p class="productPrice"><span class="oldPrice">&euro; ' . $row['price'] . '</span> - &euro;' . $row['sale_price'] . '</p>';
-            $htmlOutput .= '<button class="cartBtn" type="submit">winkelmandje</button>';
-            $htmlOutput .= '</div>';
-            $htmlOutput .= '</div>';
-            $htmlOutput .= '<div class="description">Beschrijving</div>';
-            $htmlOutput .= '<div class="productDescription">';
-            $htmlOutput .= $row['description'];
-            $htmlOutput .= '</div>';
-            $htmlOutput .= '</div>';
-
-            echo $htmlOutput;
-
-        }else if($row["releases"] >= $date){   
-            $htmlOutput  = "";   
-            $htmlOutput  = '<div class="productContent">';
-            $htmlOutput .= '<div class="productRow">';
-            $htmlOutput .= '<img src="' . $row['img_path'] . '" alt="">';
-            $htmlOutput .= '<div class="productInfo">';
-            $htmlOutput .= '<h1 class="productName">' . $row['name'] . ' - ' . $row['platform'] . '</h1>';
-            $htmlOutput .= '<div class="release"> Beschikbaar vanaf ' . $row['releases'] . '</div>';
-            $htmlOutput .= '<div class="productPrice">&euro;'. $row['price'] . '</div>';
-            $htmlOutput .= '<button class="cartBtn" type="submit">winkelmandje</button>';
-            $htmlOutput .= '</div>';
-            $htmlOutput .= '</div>';
-            $htmlOutput .= '<div class="description">Beschrijving</div>';
-            $htmlOutput .= '<div class="productDescription">';
-            $htmlOutput .= $row['description'];
-            $htmlOutput .= '</div>';
-            $htmlOutput .= '</div>';
-
-            echo $htmlOutput;
-
-        }else{
-            $htmlOutput  = "";   
-            $htmlOutput  = '<div class="productContent">';
-            $htmlOutput .= '<div class="productRow">';
-            $htmlOutput .= '<img src="' . $row['img_path'] . '" alt="">';
-            $htmlOutput .= '<div class="productInfo">';
-            $htmlOutput .= '<h1 class="productName">' . $row['name'] . ' - ' . $row['platform'] . '</h1>';
-            $htmlOutput .= '<div class="productPrice">&euro;'. $row['price'] . '</div>';
-            $htmlOutput .= '<button class="cartBtn" type="submit">winkelmandje</button>';
-            $htmlOutput .= '</div>';
-            $htmlOutput .= '</div>';
-            $htmlOutput .= '<div class="description">Beschrijving</div>';
-            $htmlOutput .= '<div class="productDescription">';
-            $htmlOutput .= $row['description'];
-            $htmlOutput .= '</div>';
-            $htmlOutput .= '</div>';
-
-            echo $htmlOutput;
-        }
+         
+        echo '<div class="productContent">
+        <div class="productRow">
+        <img src="' . $row['img_path'] . '" alt="">
+        <div class="productInfo">
+        <h1 class="productName">' . $row['name'] . ' - ' . $row['platform'] . '</h1>'
+        .($row["releases"] >= $date?'<div class="release"> Beschikbaar vanaf ' . $row['releases'] . '</div>':"")
+        .($row["sale"] == 1?'<p class="productPrice"><span class="oldPrice">&euro; ' . $row['price'] . '</span> - &euro;' . $row['sale_price'] . '</p>':'<div class="productPrice">&euro;'. $row['price'] . '</div>').
+        '<button class="cartBtn" onclick="addToWishlist()">Aan Wishlist toevoegen</button>
+        </div>
+        <div id="product" style="display:none;">' . $row['id']. '</div>
+        </div>
+        <div class="description">Beschrijving</div>
+        <div class="productDescription">'
+        . $row['description'] . 
+        '</div>
+        </div>';
+        
+        
     }
 ?>  
