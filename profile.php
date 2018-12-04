@@ -31,12 +31,14 @@
 ?>
 
             <div class="orders">
-                <h1><span>Mijn bestellingen:</span></h1>
+                <h1 class="lines"><span>Mijn bestellingen:</span></h1>
                 Geen online bestellingen gevonden
             </div>
             <div class="wishList">
-                <h1><span>Mijn wishlist:</span></h1>
-                Geen items in je wishlist.
+                <h1 class="lines"><span>Mijn wishlist:</span></h1>
+                <div class="products">
+                <?php include "php/wishList.php" ?>
+                </div>
             </div>
         </div>
     </body>

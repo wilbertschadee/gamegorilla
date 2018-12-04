@@ -11,7 +11,7 @@
             <input class="inlog" type="password" placeholder="Wachtwoord" name="Password" required>
 
             <label for="Fname">Voornaam</label>
-            <input class="login" type="text" placeholder="Voornaam" name="Fname" required>
+            <input class="inlog" type="text" placeholder="Voornaam" name="Fname" required>
         
             <label for="Lname">Achternaam</label>
             <input class="inlog" type="text" placeholder="Achternaam" name="Lname" required>

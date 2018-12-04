@@ -45,14 +45,6 @@
     min-width: 200px;
 }
 
-.orders h1{
-    border-bottom: 5px solid lightgray
-}
-
-.orders h1 span{
-    border-bottom: 5px solid #4CAF50
-}
-
 .wishList{
     width: 70%;
     margin: 60px auto;
@@ -61,10 +53,10 @@
     min-width: 200px;
 }
 
-.wishList h1{
+.lines{
     border-bottom: 5px solid lightgray
 }
 
-.wishList h1 span{
+.lines span{
     border-bottom: 5px solid #4CAF50
 }

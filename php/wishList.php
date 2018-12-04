@@ -1,0 +1,39 @@
+<?php
+
+    include "dbConnection.php";
+    
+    $profile = $_GET['user_id'];
+
+    $sql = "SELECT * FROM wishlist WHERE user_id = '$profile'";
+
+    $data = $conn->query($sql);
+
+    foreach($data as $row){
+
+        if($data->rowCount() > 0) {
+
+            $wishList = $row['product_id'];
+
+            $sql = "SELECT * FROM products WHERE id = '$wishList'";
+        
+            $data = $conn->query($sql);
+        
+            $date = date('Y-m-d');
+        
+            foreach ($data as $row){
+                    echo '<div class="product"> 
+                    <a href="' . 'products.php?id=' . $row['id'] . '">
+                    <img src="' . $row['img_path'] . '" alt="' . $row['name'] . '" style="max-width:100%">
+                    '.($row["releases"] >= $date?'<p class=release>' . $row['releases'] . ' beschikbaar</p>':"").
+                    '<h1 class=name>'. $row['name'] . ' - ' . $row['platform'] . '</h1>
+                    '.($row["sale"] == 1?'<p class="price"><span class="oldPrice"> € ' . $row['price'] . '</span> - €' . $row['sale_price'] . '</p>':'<p class="price"> € ' . $row['price'] . '</p>').
+                    '</a>
+                    </div>';   
+            }
+        }else if($data->rowCount() == 0){
+            echo 'geen items in wishlist.';
+        }
+    }
+?>
+
+    

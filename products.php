@@ -21,7 +21,8 @@
             $htmlOutput .= '<img src="' . $row['img_path'] . '" alt="">';
             $htmlOutput .= '<div class="productInfo">';
             $htmlOutput .= '<h1 class="productName">' . $row['name'] . ' - ' . $row['platform'] . '</h1>';
-            $htmlOutput .= '<p class="productPrice"><span class="oldPrice"> € ' . $row['price'] . '</span> - €' . $row['sale_price'] . '</p>';
+            $htmlOutput .= '<p class="productPrice"><span class="oldPrice">&euro; ' . $row['price'] . '</span> - &euro;' . $row['sale_price'] . '</p>';
+            $htmlOutput .= '<button class="cartBtn" type="submit">winkelmandje</button>';
             $htmlOutput .= '</div>';
             $htmlOutput .= '</div>';
             $htmlOutput .= '<div class="description">Beschrijving</div>';
@@ -39,8 +40,9 @@
             $htmlOutput .= '<img src="' . $row['img_path'] . '" alt="">';
             $htmlOutput .= '<div class="productInfo">';
             $htmlOutput .= '<h1 class="productName">' . $row['name'] . ' - ' . $row['platform'] . '</h1>';
-            $htmlOutput .= '<div class="release"> Beschikbaar vanaf' . $row['releases'] . '</div>';
+            $htmlOutput .= '<div class="release"> Beschikbaar vanaf ' . $row['releases'] . '</div>';
             $htmlOutput .= '<div class="productPrice">&euro;'. $row['price'] . '</div>';
+            $htmlOutput .= '<button class="cartBtn" type="submit">winkelmandje</button>';
             $htmlOutput .= '</div>';
             $htmlOutput .= '</div>';
             $htmlOutput .= '<div class="description">Beschrijving</div>';
@@ -59,6 +61,7 @@
             $htmlOutput .= '<div class="productInfo">';
             $htmlOutput .= '<h1 class="productName">' . $row['name'] . ' - ' . $row['platform'] . '</h1>';
             $htmlOutput .= '<div class="productPrice">&euro;'. $row['price'] . '</div>';
+            $htmlOutput .= '<button class="cartBtn" type="submit">winkelmandje</button>';
             $htmlOutput .= '</div>';
             $htmlOutput .= '</div>';
             $htmlOutput .= '<div class="description">Beschrijving</div>';
