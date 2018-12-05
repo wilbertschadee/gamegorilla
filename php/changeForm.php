@@ -31,8 +31,6 @@ include "dbConnection.php";
         place = '$user_place', streetname = '$user_street', housenumber = '$user_house', zipcode = '$user_zip',
         phonenumber = '$user_phone', birthdate = '$user_birth' Where user_id = '$profile' ";
         $conn->exec($sql);
-
-
     }
     catch(PDOException $e)
     {

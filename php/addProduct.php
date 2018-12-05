@@ -27,13 +27,14 @@
         $conn->exec($sql);
         // echo "New record created successfully";
 
-        header('location: ../addProduct.php?succes')
+        header('location: ../addProduct.php?succes');
+
     }
     catch(PDOException $e)
     {
         echo $sql . "<br>" . $e->getMessage();
 
-        header('location: ../addProduct.php?error')
+        header('location: ../addProduct.php?error');
     }
 
     $conn = null;
