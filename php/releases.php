@@ -2,10 +2,11 @@
     
     include "dbConnection.php";
     
-    $sql = "SELECT * FROM products WHERE releases >= DATE_ADD(CURDATE(), INTERVAL -1 month);";
+    $sql = "SELECT * FROM products WHERE releases >= DATE_ADD(CURDATE(), INTERVAL 0 DAY);";
     
     $data = $conn->query($sql); 
 
+    $date = date('Y-m-d');
 
     foreach ($data as $row)
     {   
