@@ -9,17 +9,18 @@
     font-size: 35px;
     font-weight: 300;
     color: #545454;
-    box-shadow: 0 0 10px rgba(0,0,0,.15);
-    padding: 25px;
-    height: 200px;
-    overflow: hidden;
+
 }
 
 .cartProduct{
     padding: 10px;
     display: flex;
     flex-direction: row;
+    margin: 50px 0;
     height: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    padding: 25px;
+    overflow: hidden;
 }
 
 .money{
