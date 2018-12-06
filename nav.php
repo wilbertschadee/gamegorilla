@@ -1,4 +1,5 @@
-<?php  session_start();
+<?php  
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,9 @@
     <link rel="stylesheet" href="css/display.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/cart.css">
     <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
 
 </head>
 <body>
@@ -40,13 +43,15 @@
         <div class="navLogin">
             <?php 
             if(isset($_SESSION["loggedin"])){
-                echo'<!--<a href="">MANDJE</a>-->
+                echo'<a href="cart.php">MANDJE</a>
                     <a href="profile.php?user_id=' . $_SESSION['userid'] . '">MIJN ACCOUNT</a>
                     <a href="php/logout.php">LOG OUT</a>';
             } else {
                 echo'<a href="login.php">LOGIN</a>';
             }
             ?>
+
+            </div>
 
         </div>
     </div>

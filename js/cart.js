@@ -1,4 +1,4 @@
-function addToWishlist() {
+function addToCart() {
 
    // var category = document.getElementById('category').value;
     var productid = document.getElementById('product').innerHTML;
@@ -10,7 +10,7 @@ function addToWishlist() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
 
-            // document.getElementById("product").innerHTML = this.responseText;
+            //document.getElementById("phpOutput").innerHTML = this.responseText;
             console.log(this.responseText);
        
         }else if(this.status == 404){
@@ -18,7 +18,7 @@ function addToWishlist() {
         }
     };
     
-    xmlhttp.open("GET", "php/wishListBtn.php?id=" + productid, true);
+    xmlhttp.open("GET", "php/cart.php?id=" + productid, true);
     xmlhttp.send();
 
 }
