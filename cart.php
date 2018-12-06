@@ -2,17 +2,13 @@
 
     <div class="wrapper">
         <div class="cart">
-           <?php include "php/showCart.php"; ?>
-                <!-- <div class="money">
-                    <div class="amount">
-                        1
-                    </div>
-                    <div class="total">
-                        20euro
-                    </div>
-                </div> -->
-            </div>
+            <?php include "php/showCart.php"; 
+            if(!empty($_SESSION['cart'])){
+            echo '<a href="php/order.php">bestellen</a>';
+            }
+            ?>
         </div>
+       
     </div>
 </body>
 
