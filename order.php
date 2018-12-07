@@ -1,8 +1,10 @@
 <?php
 
-    include "dbConnection.php";
+    include "php/dbConnection.php";
 
-    session_start();
+    include "nav.php";
+
+    
     
     $sql = "SELECT order_number FROM orders";
 
@@ -33,7 +35,11 @@
         catch(PDOException $e){
             // echo $sql . "<br>" . $e->getMessage();
         }
-        header("Location: ../cart.php");
+        echo '<div class="wrapper">
+        <div class="cart">
+        bedankt voor uw bestelling 
+        </div>
+        </div>';
     }
 
     $_SESSION['cart'] = array();

@@ -4,7 +4,7 @@
         <div class="cart">
             <?php include "php/showCart.php"; 
             if(!empty($_SESSION['cart'])){
-            echo '<a href="php/order.php">bestellen</a>';
+            echo '<a href="order.php">bestellen</a>';
             }
             ?>
         </div>
