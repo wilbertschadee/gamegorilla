@@ -27,16 +27,14 @@
             $sql = "INSERT INTO orders(user_id, product_id, order_number)
             VALUES ('$userID', '$productID', '$orderNumber')";
 
-            $conn->exec($sql);
-
-        
-             
+            $conn->exec($sql); 
         }
-        catch(PDOException $e)
-        {
+
+        catch(PDOException $e){
             // echo $sql . "<br>" . $e->getMessage();
         }
         header("Location: ../cart.php");
-        }
-$_SESSION['cart'] = array();
+    }
+
+    $_SESSION['cart'] = array();
     
