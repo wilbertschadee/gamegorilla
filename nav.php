@@ -29,8 +29,11 @@ session_start();
             <?php 
             if(isset($_SESSION["loggedin"])){
                 if($_SESSION['role'] == 1){
-                    echo '<a href = "addProduct.php">PRODUCT TOEVOEGEN<a>';
+                    echo '<a href = "addProduct.php">PRODUCT TOEVOEGEN</a>';
                 }
+                // else if($_SESSION['role'] == 2){
+                //     echo '<a href = "showOrder.php">BESTELLINGEN BEKIJKEN</a>';
+                // }
             }
             ?>
         </div>
