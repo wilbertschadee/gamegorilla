@@ -22,7 +22,8 @@
         <h1 class="productName">' . $row['name'] . ' - ' . $row['platform'] . '</h1>'
         .($row["releases"] >= $date?'<div class="release"> Beschikbaar vanaf ' . $row['releases'] . '</div>':"")
         .($row["sale"] == 1?'<p class="productPrice"><span class="oldPrice">&euro; ' . $row['price'] . '</span> - &euro;' . $row['sale_price'] . '</p>':'<div class="productPrice">&euro;'. $row['price'] . '</div>').
-        '<button class="cartBtn" onclick="addToWishlist()">Aan Wishlist toevoegen</button><br><br><br>' 
+        '<button class="cartBtn" onclick="addToWishlist()">Aan Wishlist toevoegen</button><br><br><br>
+        <button class="cartBtn" onclick="addToCart()"> toevoegen aan cart</button><br><br><br>'
         . ($_SESSION['role'] == 1? '
         <div>
         <form action="php/addSale.php?id=' . $products . '" method="post">

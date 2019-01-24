@@ -30,7 +30,7 @@
                     '</a>
                     </div>';   
             }
-        }else if($data->rowCount() == 0){
+        }else{
             echo 'Geen online bestellingen gevonden ';
         }
     }
