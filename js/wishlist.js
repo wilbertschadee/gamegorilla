@@ -10,7 +10,8 @@ function addToWishlist() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
 
-            // document.getElementById("product").innerHTML = this.responseText;
+            document.getElementById("feedBack").innerHTML = this.responseText;
+            document.getElementById("feedBack").style.display = "block";
             console.log(this.responseText);
        
         }else if(this.status == 404){

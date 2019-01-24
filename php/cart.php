@@ -8,3 +8,4 @@
 
     array_push($_SESSION['cart'], $_GET['id']);
 
+    echo "Product tegevoegd aan je winkelandje";
