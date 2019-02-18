@@ -131,10 +131,27 @@
             . $this -> product_description . 
             '</div>
             </div>';
+        }
+
+
     }
 
+    class productTitle{
+
+        private $product_id;
+        private $product_name;
+        private $category;
+
+        public function __construct($id, $name, $category) {
+            $this -> product_id = $id;
+            $this -> product_name = $name;
+            $this -> product_category = $category;
+        }
+
+        public function title(){
+            echo $this -> product_category . ' || ' . $this -> product_name;
+        }
 
     }
     
-
 ?>
