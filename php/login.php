@@ -10,9 +10,6 @@
     
     $data = $conn->query($sql);
 
-    // $data->execute(array($user_email,$user_password));
-    // $row = $data->fetch(PDO::FETCH_BOTH);
-
     foreach($data as $row){
 
         if($data->rowCount() > 0) {
@@ -30,15 +27,10 @@
             $_SESSION['loggedin'] = true; 
 
             header('location: ../profile.php?user_id=' . $_SESSION['userid']);
-            // echo $user_email;
         } else {
             $message = "Username/Password is wrong";
             echo $message;
         }
     }
-// if(isset($_SESSION["NAME"]) || $_SESSION["NAME"] != ""){
 
-// }
-
-// STATEMENT ? TRUE  : FALSE
 ?>
